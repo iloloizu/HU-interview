@@ -1,10 +1,8 @@
 import { Link, NavLink } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 
 export function Navbar() {
-  const [isDark, setIsDark] = useState<boolean>(() => {
+  const [isDark] = useState<boolean>(() => {
     const stored = localStorage.getItem('theme');
     if (stored) return stored === 'dark';
     return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -39,16 +37,7 @@ export function Navbar() {
           <NavLink to="/admin" className={navLinkClass}>Admin</NavLink>
           <NavLink to="/profile" className={navLinkClass}>Profile</NavLink>
         </div>
-        <div className="ml-auto">
-          {/* <button
-            onClick={() => setIsDark((v) => !v)}
-            aria-label="Toggle dark mode"
-            className="inline-flex items-center gap-2 px-3 py-2 rounded-md border border-white/30 hover:bg-white/10"
-          >
-            <FontAwesomeIcon icon={isDark ? faSun : faMoon} />
-            <span className="text-sm">{isDark ? 'Light' : 'Dark'}</span>
-          </button> */}
-        </div>
+        <div className="ml-auto" />
       </div>
     </nav>
   );
