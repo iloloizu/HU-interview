@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@theme {
+  /* Existing HU brand colors */
+  --color-huGreen: #006747;
+  --color-huGold: #FFC72C;
+
+  /* Primary */
+  --color-pms-2965: #003865; /* navy blue */
+  --color-pms-186:  #C8102E; /* red */
+  --color-pms-000c: #FFFFFF; /* white */
+
+  /* Secondary */
+  --color-pms-2165: #607D8B; /* slate gray-blue */
+  --color-pms-425:  #54585A; /* dark gray */
+
+  /* Tertiary */
+  --color-pms-519:  #582C83; /* purple */
+  --color-pms-158:  #ED8B00; /* orange */
+  --color-pms-1245: #C69214; /* gold */
+  --color-pms-123:  #FFC72C; /* yellow */
+  --color-pms-576:  #6C8E47; /* green */
+  --color-pms-5473: #205C66; /* teal */
+  --color-pms-2995: #00A3E0; /* bright blue */
+}
+
+/* Minimal base adjustments */
+html, body, #root {
+  height: 100%;
+}
+body {
+  margin: 0;
+  background-color: #ffffff;
+  color: #0f172a; /* slate-900 */
+}
